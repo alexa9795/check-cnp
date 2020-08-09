@@ -42,7 +42,6 @@ class CnpController extends AbstractController
                 ->setCounty($data['county'])
                 ->setCnp($data['cnp']);
 
-            dd($person);
             $this->addFlash('result', $cnpService->isCnpValid($person));
         }
 
