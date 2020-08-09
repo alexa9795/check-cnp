@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} CNP CHECKER {% endblock %}
+
+{% block body %}
+
+<h1>CNP CHECKER</h1>
+
+    <div>Please complete fields below for validation </div>
+    <br>
+
+    <div>
+        <p>
+            {% block data_body %} {% endblock %}
+        </p>
+    </div>
+
+    <br/>
+    <h1>RESULT</h1>
+    <div>
+        {% for message in app.flashes('result') %}
+            <div class="flash-notice">
+                {% if message == false %}
+                    <p>CNP is invalid!</p>
+                {% else %}
+                    <p>CNP is valid!</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'show.html.twig'%}
+
+{% block data_body %}
+
+    {{ form_start(dataForm) }}
+
+    {{ form_widget(dataForm) }}
+
+    <br/>
+    <button type="submit" class="btn btn-primary">Submit!</button>
+
+    {{ form_end(dataForm) }}
+
+{% endblock %}
